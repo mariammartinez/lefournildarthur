@@ -6,7 +6,7 @@
 //}
 
 .info {
-  color: white;
+  color: #afafaf;
   font-size: 1.5rem;
   background-image: url(../img/pains.jpg);
   height: 500px;
@@ -27,4 +27,13 @@
 
 li {
   list-style: none;
+}
+
+a {
+  color: #000;
+
+  &:hover {
+    text-decoration: none;
+  }
+
 }
