@@ -1,12 +1,13 @@
 
-$bodyfont:"Chivo", sans-serif;
+$titlefont: "UnifrakturCook", cursive;
+@import "mixin";
 
+h1, h2 {
+  font-family: $titlefont;
+  font-size: 4rem;
+}
 .adresse {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.404); /* Black w/opacity/see-through */
-  color: #ffff;
-  font-weight: bold;
-  border: #ffff solid 5px;
+  @include box-transparent;
 }
 
 .img {
@@ -45,7 +46,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  font-family: $bodyfont;
 }
 
 .marche {
@@ -57,13 +57,24 @@ body {
 }
 
 .au-fournil {
-  background-color: rgb(255,255,255); /* Fallback color */
-  background-color: rgba(255, 255, 255, 0.404); /* Black w/opacity/see-through */
-  color: #000;
-  font-weight: bold;
-  border: #ffff solid 5px;
+  @include box-transparent-blanc;
+
+}
+
+.le-fournil {
+  height: 400px;
+
+  @include box-transparent-blanc;
 }
 
 .paul {
+  width: 100%;
+}
+
+.info {
+  height: 550px;
+}
+
+img {
   width: 100%;
 }
