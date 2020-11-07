@@ -1,16 +1,16 @@
 
 @mixin box-transparent {
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0, 0, 0, 0.404);
-    color: #ffff;
-    font-weight: bold;
-    border: #ffff solid 5px;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.404);
+  color: #ffff;
+  font-weight: bold;
+  border: #ffff solid 5px;
 }
 
 @mixin box-transparent-blanc {
-    background-color: rgb(255,255,255);
-    background-color: rgba(255, 255, 255, 0.404); 
-    color: #000;
-    font-weight: bold;
-    border: #ffff solid 5px;
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.404);
+  color: #000;
+  font-weight: bold;
+  border: #ffff solid 5px;
 }

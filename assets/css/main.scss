@@ -1,11 +1,14 @@
 
 $titlefont: "UnifrakturCook", cursive;
+
 @import "mixin";
 
-h1, h2 {
+h1,
+h2 {
   font-family: $titlefont;
   font-size: 4rem;
 }
+
 .adresse {
   @include box-transparent;
 }
@@ -37,7 +40,6 @@ a {
   &:hover {
     text-decoration: none;
   }
-
 }
 
 body {
@@ -58,7 +60,6 @@ body {
 
 .au-fournil {
   @include box-transparent-blanc;
-
 }
 
 .le-fournil {
