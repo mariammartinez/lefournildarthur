@@ -38,7 +38,8 @@ a {
   color: #000;
 
   &:hover {
-    text-decoration: none;
+    color: #000;
+    font-weight: lighter;
   }
 }
 
@@ -78,4 +79,12 @@ body {
 
 img {
   width: 100%;
+}
+
+.taille {
+  max-width: 150px;
+}
+
+.vol {
+  max-width: 100px;
 }
