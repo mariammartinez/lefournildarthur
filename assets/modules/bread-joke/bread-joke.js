@@ -1,0 +1,97 @@
+"use strict";
+
+const $ = require('jquery');
+require('./bread-joke.scss');
+
+$(function(){
+
+	let body = $('body');
+
+	// ***** params
+	// temps entre chaque apparition
+	let minWait = 5000;
+	let maxWait = 30000;
+
+	// taille image
+	let minWidth = 75;
+	let maxWidth = 250;
+
+	// durée spin
+	let minSpinDuration = 1500;
+	let maxSpinDuration = 6000;
+
+	// durée translation
+	let minTranslationDuration = 5000;
+	let maxTranslationDuration = 15000;
+
+	// ***** fin params
+
+
+
+
+	function getRnd(min, max) {
+		return min + Math.floor(Math.random() * Math.floor(max-min+1));
+	}
+
+	// 0: top, 1: right, 2: bottom, 3: left
+	function getRndPosition(el, fromSide) {
+		let side = getRnd(0,3);
+		while(side === fromSide){
+			side = getRnd(0,3);
+		}
+		let x = 0;
+		let y = 0;
+		if(side === 0){
+			x = getRnd(0-el.width(),body.width());
+			y = 0-el.height();
+		}else if(side === 2){
+			x = body.width();
+			y = getRnd(0-el.height(), body.height());
+		}else if(side === 3){
+			x = getRnd(0-el.width(),body.width());
+			y = body.height();
+		}else{
+			x = 0-el.width();
+			y = getRnd(0-el.height(), body.height());
+		}
+		return {x: x, y: y, side: side };
+	}
+
+	function startJoke() {
+		let width = getRnd(minWidth, maxWidth);
+		let spin = getRnd(minSpinDuration, maxSpinDuration);
+		let spinDirection = getRnd(0, 1);
+
+		// on créé l'image
+		let el = $('<img />');
+		el.addClass(spinDirection === 0 ? 'joke' : 'joke2');
+		el.attr('src', 'https://fr.rc-cdn.community.thermomix.com/recipeimage/evs5k5in-21c05-024863-cfcd2-71r3w15i/ec37d89a-70b3-41c6-a5c1-cee9603cefb8/main/pain-du-boulanger.jpg');
+		el.css('width', width);
+		el.css('animation-duration', spin);
+		$('footer').append(el);
+		let positionFrom = getRndPosition(el);
+		el.css('left', `${positionFrom.x}px`);
+		el.css('top', `${positionFrom.y}px`);
+
+		// on créé l'animation
+		let positionTo = getRndPosition(el, positionFrom.side);
+		let duration = getRnd(minTranslationDuration,maxTranslationDuration);
+		el.animate({
+			left: `${positionTo.x}px`,
+			top: `${positionTo.y}px`,
+		}, duration, 'linear', function() {
+			el.remove();
+		});
+
+		// récursion
+		setTimeout(() => {
+			startJoke();
+		}, getRnd(minWait, maxWait));
+	}
+
+	// first
+	setTimeout(() => {
+		startJoke();
+	}, getRnd(minWait, maxWait));
+
+});

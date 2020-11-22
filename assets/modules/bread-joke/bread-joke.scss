@@ -1,0 +1,26 @@
+.joke {
+  position: fixed;
+  width: 100px;
+  animation: spin 4s linear infinite;
+}
+.joke2 {
+  position: fixed;
+  width: 100px;
+  animation: spin2 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
