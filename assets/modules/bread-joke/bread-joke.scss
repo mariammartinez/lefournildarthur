@@ -1,12 +1,12 @@
 .joke {
   position: fixed;
   width: 100px;
-  animation: spin 4s linear infinite;
+  animation: spin 2s linear infinite;
 }
 .joke2 {
   position: fixed;
   width: 100px;
-  animation: spin2 4s linear infinite;
+  animation: spin2 2s linear infinite;
 }
 
 @keyframes spin {

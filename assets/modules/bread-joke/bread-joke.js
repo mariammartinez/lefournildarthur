@@ -9,8 +9,8 @@ $(function(){
 
 	// ***** params
 	// temps entre chaque apparition
-	let minWait = 5000;
-	let maxWait = 30000;
+	let minWait = 2000;
+	let maxWait = 3000;
 
 	// taille image
 	let minWidth = 75;
@@ -65,7 +65,7 @@ $(function(){
 		// on créé l'image
 		let el = $('<img />');
 		el.addClass(spinDirection === 0 ? 'joke' : 'joke2');
-		el.attr('src', 'https://fr.rc-cdn.community.thermomix.com/recipeimage/evs5k5in-21c05-024863-cfcd2-71r3w15i/ec37d89a-70b3-41c6-a5c1-cee9603cefb8/main/pain-du-boulanger.jpg');
+		el.attr('src', '/img/pan.png');
 		el.css('width', width);
 		el.css('animation-duration', spin);
 		$('footer').append(el);
