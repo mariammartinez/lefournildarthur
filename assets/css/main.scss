@@ -14,7 +14,7 @@ h2 {
 }
 
 .img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .produit {
@@ -69,7 +69,7 @@ body {
 }
 
 .paul {
-  width: 100%;
+  max-width: 100%;
 }
 
 .info {
@@ -80,10 +80,11 @@ img {
   width: 100%;
 }
 
-.taille {
+.bio {
   max-width: 150px;
 }
 
-.vol {
-  max-width: 100px;
+
+.map {
+  max-width: 100%;
 }
