@@ -10,7 +10,7 @@ $(function(){
 	// ***** params
 	// temps entre chaque apparition
 	let minWait = 2000;
-	let maxWait = 3000;
+	let maxWait = 30000;
 
 	// taille image
 	let minWidth = 75;
@@ -54,7 +54,7 @@ $(function(){
 			x = 0-el.width();
 			y = getRnd(0-el.height(), body.height());
 		}
-		return {x: x, y: y, side: side };
+		return {side: side,x: x, y: y};
 	}
 
 	function startJoke() {

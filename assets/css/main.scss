@@ -1,5 +1,6 @@
 
-$titlefont: "UnifrakturCook", cursive;
+/*$titlefont: "UnifrakturCook", cursive;*/
+$titlefont: "Permanent Marker", cursive;
 
 @import "mixin";
 
@@ -7,6 +8,7 @@ h1,
 h2 {
   font-family: $titlefont;
   font-size: 4rem;
+  text-shadow: 1px 1px 2px beige, 0 0 1em red, 0 0 0.2em red;
 }
 
 .adresse {
@@ -84,7 +86,7 @@ img {
   max-width: 150px;
 }
 
-
 .map {
   max-width: 100%;
 }
+
