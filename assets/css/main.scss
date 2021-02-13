@@ -65,9 +65,9 @@ body {
 }
 
 .le-fournil {
-  height: 2000px;
+  height: 3000px;
 
-  @include box-transparent-blanc;
+  @include box-transparent;
 }
 
 .paul {
@@ -84,4 +84,8 @@ img {
 
 .bio {
   max-width: 150px;
+}
+.list {
+  list-style-type: circle;
+  margin-left: 20px;
 }
