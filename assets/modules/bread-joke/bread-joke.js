@@ -1,8 +1,8 @@
 "use strict";
 
-const $ = require('jquery');
 require('./bread-joke.scss');
 
+/* global $ */
 $(function(){
 
 	let body = $('body');
@@ -10,7 +10,7 @@ $(function(){
 	// ***** params
 	// temps entre chaque apparition
 	let minWait = 2000;
-	let maxWait = 30000;
+	let maxWait = 10000;
 
 	// taille image
 	let minWidth = 75;
@@ -25,6 +25,8 @@ $(function(){
 	let maxTranslationDuration = 15000;
 
 	// ***** fin params
+
+	const elFooter = $('footer');
 
 
 
@@ -68,7 +70,7 @@ $(function(){
 		el.attr('src', '/img/pan.png');
 		el.css('width', width);
 		el.css('animation-duration', spin);
-		$('footer').append(el);
+		elFooter.append(el);
 		let positionFrom = getRndPosition(el);
 		el.css('left', `${positionFrom.x}px`);
 		el.css('top', `${positionFrom.y}px`);
