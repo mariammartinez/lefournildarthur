@@ -1,7 +1,7 @@
 "use strict";
 
 require("../css/app.scss");
-const $ = require("jquery");
+const $ = window.$ = require("jquery");
 require("bootstrap");
 require('../modules/bread-joke/bread-joke');
 
