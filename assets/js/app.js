@@ -23,4 +23,12 @@ $(function() {
 			}
 		}
 	});
+
+	/**
+	 * button hide/show bread story
+	 */
+	$('#story-but').click(function(){
+		$('#story-block').toggleClass('story-hidden').toggleClass('story-show');
+	});
+
 });

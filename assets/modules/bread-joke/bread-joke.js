@@ -43,7 +43,7 @@ $(function(){
 		let y = 0;
 		if(side === 0){
 			x = getRnd(0-el.width(),body.width());
-			y = 0-el.height();
+			y = 0-el.height()*2;
 		}else if(side === 2){
 			x = body.width();
 			y = getRnd(0-el.height(), body.height());
@@ -51,7 +51,7 @@ $(function(){
 			x = getRnd(0-el.width(),body.width());
 			y = body.height();
 		}else{
-			x = 0-el.width();
+			x = 0-el.width()*2;
 			y = getRnd(0-el.height(), body.height());
 		}
 		return {side: side,x: x, y: y};

@@ -1,5 +1,5 @@
 
-/*$titlefont: "UnifrakturCook", cursive;*/
+//$titlefont: "UnifrakturCook", cursive;
 $titlefont: "Permanent Marker", cursive;
 
 @import "mixin";
@@ -8,7 +8,18 @@ h1,
 h2 {
   font-family: $titlefont;
   font-size: 4rem;
-  text-shadow: 1px 1px 2px beige, 0 0 1em red, 0 0 0.2em red;
+  transition: all 1s linear;
+  animation: 2000ms linear 0s infinite alternate anim_title;
+}
+
+@keyframes anim_title {
+  from {
+    text-shadow: 1px 1px 2px #f5f5dc, 0 0 1em #df1717, 0 0 0.2em #df1717;
+  }
+
+  to {
+    text-shadow: 1px 1px 2px #f5f5dc, 0 0 1em #ea5c07, 0 0 0.2em #ea5c07;
+  }
 }
 
 .adresse {
@@ -25,7 +36,7 @@ h2 {
 }
 
 .my-10 {
-  margin: 100px 0px;
+  margin: 100px 0;
 }
 
 ul {
@@ -66,8 +77,20 @@ body {
 
 .le-fournil {
   height: 2700px;
-
   @include box-transparent;
+}
+
+#story-block {
+  transition: max-height 1s ease-in-out;
+  overflow: hidden;
+
+  &.story-hidden {
+    max-height: 0;
+  }
+
+  &.story-show {
+    max-height: 3000px;
+  }
 }
 
 .paul {
@@ -85,6 +108,7 @@ img {
 .bio {
   max-width: 150px;
 }
+
 .list {
   list-style-type: circle;
   margin-left: 20px;
