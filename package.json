@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack -d",
+    "w": "webpack -d --watch",
     "watch": "webpack -d --watch",
     "build": "webpack -p"
   },

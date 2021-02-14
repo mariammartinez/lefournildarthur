@@ -8,7 +8,7 @@
     "media-feature-name-no-vendor-prefix": true,
     "at-rule-no-vendor-prefix": true,
     "color-named": "never",
-    "max-line-length": 60,
+    "max-line-length": 100,
     "at-rule-no-unknown": null
   }
 }
