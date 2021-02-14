@@ -1,11 +1,8 @@
 "use strict";
 
-/**
- * @var {jquery} $
- */
-
 require('./bread-joke.scss');
 
+/* global $ */
 $(function(){
 
 	let body = $('body');
